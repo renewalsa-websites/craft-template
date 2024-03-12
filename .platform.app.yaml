@@ -54,12 +54,8 @@ mounts:
     # Storage for Craft-writeable files.
     "/storage": "shared:files/storage"
     "/web/cpresources": "shared:files/cpresources"
-    # The license file needs to be runtime writeable.
-    "/license": "shared:files/license"
-    # Public uploads / Images
-    "/web/images": "shared:files/images"
-    "/web/imager": "shared:files/imager"
-    "/web/documents": "shared:files/documents"
+    # Volumes Folder for uploads etc
+    "/volumes": "shared:volumes"
 
 
 # The configuration of app when it is exposed to the web.
@@ -70,15 +66,9 @@ web:
             root: "web"
             # The front-controller script to send non-static requests to.
             passthru: "/index.php"
+        # Example: Cache Uploaded images in the browser for 2 weeks.
         "/images":
           allow: true
           expires: 2w
           root: "web/images"
-        "/imager":
-          allow: true
-          expires: 2w
-          root: "web/imager"
-        "/documents":
-          allow: true
-          expires: 2w
-          root: "web/documents"
+
