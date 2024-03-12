@@ -6,10 +6,12 @@ if [ "$PLATFORM_BRANCH" != "live" ] ; then
     export ENVIRONMENT='dev'
     export DEV_MODE=true
     export DISALLOW_ROBOTS=true
+    export ALLOW_ADMIN_CHANGES=true
 else
     export ENVIRONMENT='production'
     export DEV_MODE=false
     export DISALLOW_ROBOTS=false
+    export ALLOW_ADMIN_CHANGES=false
 fi
 
 # The secure key Craft will use for hashing and encrypting data
@@ -26,8 +28,6 @@ export CRAFT_DB_SCHEMA=""
 export CRAFT_DB_TABLE_PREFIX=""
 
 # General settings (see config/general.php)
-
-export ALLOW_ADMIN_CHANGES=true
 
 
 # export PRODUCTION_URL=https://prospectcorner.com.au/
