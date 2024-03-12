@@ -55,7 +55,7 @@ mounts:
     "/storage": "shared:files/storage"
     "/web/cpresources": "shared:files/cpresources"
     # Volumes Folder for uploads etc
-    "/volumes": "shared:volumes"
+    "/volumes": "shared:files/volumes"
 
 
 # The configuration of app when it is exposed to the web.
