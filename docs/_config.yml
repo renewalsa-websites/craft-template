@@ -1,13 +1,13 @@
-title: Renewal SA WordPress Template
-description: A starter template for Renewal SA WordPress Sites
+title: Renewal SA Craft Template
+description: A starter template for Renewal SA Craft CMS Sites
 theme: just-the-docs
 
-url: https://renewalsa-websites.github.io/wordpress-template/
+url: https://renewalsa-websites.github.io/craft-template/
 
 logo: "/assets/renewalsa-logo.png"
 
 aux_links:
-  Template Repository: https://github.com/renewalsa-websites/wordpress-template
+  Template Repository: https://github.com/renewalsa-websites/craft-template
 
 callouts:
   warning:
