@@ -1,0 +1,11 @@
+fill: null
+format: null
+handle: thumbnail
+height: 250
+interlace: none
+mode: crop
+name: Thumbnail
+position: center-center
+quality: null
+upscale: false
+width: 250

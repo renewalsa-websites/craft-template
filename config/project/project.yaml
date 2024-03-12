@@ -1,0 +1,42 @@
+dateModified: 1709879431
+email:
+  fromEmail: alex@framecreative.com.au
+  fromName: 'Craft Template'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  formUploads:
+    hasUrls: false
+    name: 'Form Uploads'
+    settings:
+      path: '@privateAssetPath/form-uploads'
+    type: craft\fs\Local
+    url: null
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@publicAssetPath/images'
+    type: craft\fs\Local
+    url: /images
+meta:
+  __names__:
+    0e9e3fe1-874e-4a28-a983-16edd0d51f64: 'Form Uploads' # Form Uploads
+    12d33fd0-784c-41d1-af43-3444edf9358e: 'Test Globals' # Test Globals
+    849e17ee-38b4-4818-8e0f-7d1438194658: ' Test Image Field' #  Test Image Field
+    0987b3e4-95ff-4979-bb88-d68911548fdd: Common # Common
+    c055532e-55b9-4113-abcb-aef856e08924: 'Craft Template' # Craft Template
+    c812fea5-f86d-4314-b3b8-1d5a29ab088a: Images # Images
+    c8161ea1-2970-4def-9f23-7118c5e44f89: 'Craft Template' # Craft Template
+    fa670513-60ac-4638-b2af-b97c1ae1f1bc: Thumbnail # Thumbnail
+system:
+  edition: solo
+  live: true
+  name: 'Craft Template'
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

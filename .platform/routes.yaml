@@ -1,0 +1,18 @@
+# Each route describes how an incoming URL is going to be processed by Platform.sh.
+"https://{default}/":
+    type: upstream
+    id: "primary"
+    upstream: "craft-template:http"
+
+"https://www.{default}/":
+    type: redirect
+    to: "https://{default}/"
+
+
+# MULTISITE EXAMPLE
+# "https://secondary.{default}/":
+#     type: upstream
+#     id: "secondary"
+#     upstream: "craft-template:http"
+
+

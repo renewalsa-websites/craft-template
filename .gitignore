@@ -1,0 +1,25 @@
+/.env
+/.idea
+/vendor
+.DS_Store
+
+# Craft
+**/cpresources
+**/imager
+storage/*
+
+# Volumes / FS Examples
+# Keeps folder structures in git, does not commit files
+
+!volumes
+volumes/*
+
+!volumes/public
+!volumes/private
+
+volumes/public/*/*
+volumes/private/*/*
+
+!volumes/**/.gitkeep
+
+!/**/.gitkeep

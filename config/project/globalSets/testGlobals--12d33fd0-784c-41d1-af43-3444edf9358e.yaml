@@ -1,0 +1,24 @@
+fieldLayouts:
+  a4ad5acf-071b-47e6-ae22-18d566a75427:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 849e17ee-38b4-4818-8e0f-7d1438194658 #  Test Image Field
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d8d1da86-203c-4808-b786-d6ad99b87f1d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1d11d51a-39b7-4e25-8ac3-907410317b8f
+        userCondition: null
+handle: testGlobals
+name: 'Test Globals'
+sortOrder: 2

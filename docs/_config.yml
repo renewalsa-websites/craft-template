@@ -1,0 +1,25 @@
+title: Renewal SA WordPress Template
+description: A starter template for Renewal SA WordPress Sites
+theme: just-the-docs
+
+url: https://renewalsa-websites.github.io/wordpress-template/
+
+logo: "/assets/renewalsa-logo.png"
+
+aux_links:
+  Template Repository: https://github.com/renewalsa-websites/wordpress-template
+
+callouts:
+  warning:
+    title: Warning
+    color: red
+  info:
+    title: Info
+    color: yellow
+  note:
+    title: Note
+    color: blue
+  new:
+    title: New
+    color: green
+
