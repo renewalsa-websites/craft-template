@@ -8,7 +8,7 @@ if [ "$PLATFORM_BRANCH" != "live" ] ; then
     export DISALLOW_ROBOTS=true
 else
     export ENVIRONMENT='production'
-    export DEV_MODE=false
+    export DEV_MODE=true
     export DISALLOW_ROBOTS=false
 fi
 
@@ -27,6 +27,8 @@ export CRAFT_DB_TABLE_PREFIX=""
 
 # General settings (see config/general.php)
 export ALLOW_ADMIN_CHANGES=false
+
+export CRAFT_EPHEMERAL=true
 
 export PRIMARY_URL=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.id == "primary") | .key')
 # export SECONDARY_URL=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.id == "secondary") | .key')
