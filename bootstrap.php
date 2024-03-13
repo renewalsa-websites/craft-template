@@ -7,6 +7,7 @@
 define('CRAFT_BASE_PATH', __DIR__);
 define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH . '/vendor');
 define('CRAFT_PUBLIC_PATH', CRAFT_BASE_PATH . '/web');
+define('CRAFT_LICENSE_KEY_PATH', CRAFT_BASE_PATH . '/license/license.key');
 
 // Load Composer's autoloader
 require_once CRAFT_VENDOR_PATH . '/autoload.php';

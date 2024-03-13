@@ -54,8 +54,10 @@ mounts:
     # Storage for Craft-writeable files.
     "/storage": "shared:files/storage"
     "/web/cpresources": "shared:files/cpresources"
-    # Volumes Folder for uploads etc
+    # Volumes folder for uploads etc
     "/volumes": "shared:files/volumes"
+    # License folder as this needs to be writable
+    "/license": "shared:files/license"
 
 
 # The configuration of app when it is exposed to the web.
