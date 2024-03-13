@@ -26,6 +26,10 @@ return GeneralConfig::create()
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
     // Prevent user enumeration attacks
     ->preventUserEnumeration()
+    // Set the security Key
+    ->securityKey(App::env('CRAFT_SECURITY_KEY'))
+    // No one ever wants a username
+    ->useEmailAsUsername(true)
     // Set the @webroot alias so the clear-caches command knows where to find CP resources
     ->aliases([
         '@webroot' => CRAFT_PUBLIC_PATH,
