@@ -6,16 +6,14 @@ if [ "$PLATFORM_BRANCH" != "live" ] ; then
     export ENVIRONMENT='dev'
     export DEV_MODE=true
     export DISALLOW_ROBOTS=true
-    export ALLOW_ADMIN_CHANGES=true
 else
     export ENVIRONMENT='production'
     export DEV_MODE=false
     export DISALLOW_ROBOTS=false
-    export ALLOW_ADMIN_CHANGES=false
 fi
 
 # The secure key Craft will use for hashing and encrypting data
-export CRAFT_SECURITY_KEY=M0WgYNvnrBQiUwKIwWUXrvEA2hJGwqhw
+export CRAFT_SECURITY_KEY=
 
 # Database connection settings
 export CRAFT_DB_DRIVER="mysql"
@@ -28,14 +26,13 @@ export CRAFT_DB_SCHEMA=""
 export CRAFT_DB_TABLE_PREFIX=""
 
 # General settings (see config/general.php)
+export ALLOW_ADMIN_CHANGES=false
 
-
-# export PRODUCTION_URL=https://prospectcorner.com.au/
 export PRIMARY_URL=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.id == "primary") | .key')
 # export SECONDARY_URL=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.id == "secondary") | .key')
 
 export CRAFT_ENABLE_GQL=false
-export CRAFT_CP_TRIGGER=pcadmin
+export CRAFT_CP_TRIGGER=admin
 
 export CRAFT_TIMEZONE=Australia/Adelaide
 export CRAFT_VERIFICATION_CODE_DURATION=3600
