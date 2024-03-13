@@ -28,7 +28,7 @@ export ALLOW_ADMIN_CHANGES=false
 
 export CRAFT_EPHEMERAL=true
 
-export PRIMARY_URL=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.id == "primary") | .key')
+export PRIMARY_SITE_URL=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.id == "primary") | .key')
 # export SECONDARY_URL=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.id == "secondary") | .key')
 
 export CRAFT_ENABLE_GQL=false
