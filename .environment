@@ -1,5 +1,4 @@
 # The application ID used to to uniquely store session and cache data, mutex locks, and more
-export CRAFT_APP_ID=CraftCMS--9004b9e9-df69-41a5-bca0-854b18f9b2f7
 
 # The environment Craft is currently running in (dev, staging, production, etc.)
 if [ "$PLATFORM_BRANCH" != "live" ] ; then
@@ -13,7 +12,6 @@ else
 fi
 
 # The secure key Craft will use for hashing and encrypting data
-export CRAFT_SECURITY_KEY=
 
 # Database connection settings
 export CRAFT_DB_DRIVER="mysql"
