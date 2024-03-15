@@ -76,10 +76,10 @@ git  push  -u  origin  master
 A number of files will need the `craft-template` string replaced with your project's slug. the slug should correspond to the folder name locally for ease of setup.
 
 Replace in the following files
-`.app.platform.yaml` - `name` property
-`.ddev/config.yaml` - `name` property
-`.platform/routes.yaml` - `upstream` property
-`.env` / `.env.example.dev` - `PRIMARY_SITE_URL` 
+- `.app.platform.yaml` - `name` property
+- `.ddev/config.yaml` - `name` property
+- `.platform/routes.yaml` - `upstream` property
+- `.env` / `.env.example.dev` - `PRIMARY_SITE_URL` 
 
 ### Install Craft CMS
 To install craft for the first time, use the following.
