@@ -17,7 +17,7 @@ The following table can help you understand where best to set these values.
 | ✅ Yes | ❌ No | Environment Variables |
 | ❌ No | ❌ No | PHP Config, `.environment` file |
 
-As you can see, Enviornment Variables are often the best answer, but for non-sensitive values that stay the same between the enviornments, it can be best to commit these values to the repo via a `config/*.php` file. `.environment` can also be used to export environment variables at runtime, allowing you to "translate" platform.sh specific vars and dynamically set values.
+As you can see, environment Variables are often the best answer, but for non-sensitive values that stay the same between the environments, it can be best to commit these values to the repo via a `config/*.php` file. `.environment` can also be used to export environment variables at runtime, allowing you to "translate" platform.sh specific vars and dynamically set values.
 
 {:.warning}
 Do not commit API keys, security keys, or other sensitive information to the git repository
@@ -26,7 +26,7 @@ Do not commit API keys, security keys, or other sensitive information to the git
 
 When using environment variables, local variables can be set in `.env`. As more variables are used in the project, it is reccomended to update the `.env.example.dev` with placeholders to show which variables are expected. Do NOT put sensitive values in `.env.example.dev` as this is committed to the repository.
 
-When it comes to deploying on Platform.sh the enviornment variables can be set via the GUI or CLI. It is reccomended to set them [via the GUI](https://docs.platform.sh/administration/web/configure-project.html#variables) on [https://console.platform.sh/](https://console.platform.sh/) as we have noted some inconsistencies with how CLI created variables are shown in the GUI. It is also possible to define variables in `.platform.app.yaml` but these definitions are NOT visible via the GUI.
+When it comes to deploying on Platform.sh the environment variables can be set via the GUI or CLI. It is reccomended to set them [via the GUI](https://docs.platform.sh/administration/web/configure-project.html#variables) on [https://console.platform.sh/](https://console.platform.sh/) as we have noted some inconsistencies with how CLI created variables are shown in the GUI. It is also possible to define variables in `.platform.app.yaml` but these definitions are NOT visible via the GUI.
 
 More information on setting variables on Platform.sh can be found in their docs. 
 
@@ -43,7 +43,7 @@ This project utilises a folder structure largely based around the default craft 
 The web accessible directory is still called `web` as this is the default. Renaming this to `public` is permissable if you require, be sure to update the necessary config in `bootstrap.php` and `.platform.app.yaml`.
 
 ## License Directory
-Craft requires the license path to be writable, otherwise it throws an exception. The license has been moved to `license/license.key`, and the `license` folder is listed as a mount for platform.sh. When pushing to platform.sh for the first time, upload you license key to the mount via the CLI, or define the license key in an enviornment variable
+Craft requires the license path to be writable, otherwise it throws an exception. The license has been moved to `license/license.key`, and the `license` folder is listed as a mount for platform.sh. When pushing to platform.sh for the first time, upload you license key to the mount via the CLI, or define the license key in an environment variable
 
 ## Storage Directory
 This install assumes the storage directory is ephemeral and will not persist between environments. It is possible to sync / upload this to platform.sh as with any other mount, but this should not be required.
