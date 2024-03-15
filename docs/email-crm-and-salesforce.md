@@ -14,7 +14,7 @@ There are pre-prescribed methods for how this information should be captured, an
 
 As a rule of thumb, most Renewal SA websites will not directly email 'customers' or members of the public. If using salesforce for all forms, then the only outgoing emails for the site will be password resets, user account notifications etc.
 
-Renewal SA uses [Mailgun](https://www.mailgun.com/) as it's SMTP sending service of choice, and has a Renewal SA account. The [Mailgun WordPress plugin](https://wordpress.org/plugins/mailgun/) is provided as part of the template.
+Renewal SA uses [Mailgun](https://www.mailgun.com/) as it's SMTP sending service of choice, and has a Renewal SA account. The [Craft CMS Mailgun](https://plugins.craftcms.com/mailgun) adapter has been included in this template for ease of use.
 
 If the website is relatively small, and only sending user account related emails to admins, then it's suitable to use the 'generic' renewalsa email domain of `renewalsa.com.au`. This is a `.com.au` to avoice getting blocked by statenet filters, which will block `.sa.gov` emails coming in from outside the network.
 
@@ -27,7 +27,11 @@ If the website is using Gravity Forms, or notifies end consumers via email in so
 Some projects still utilise Campaign Monitor for mailing lists. When implementing the subscription form here there are two options
 
 - Direct form integration, submitting straight to Campaign Monitor
-- Utilise Gravity Forms and the Campaign Monitor addon, avaiable on the Renewal SA Plugins repository
+- Utilise a secondary plugin like [Formie](https://plugins.craftcms.com/formie?craft4) and sync the submission across to Compaign Monitor
+- An API based integration is possible, but not reccomended.
+
+{:.warning}
+Ensure any subscribe forms have adequate spam protection, such as Recaptcha or Turnstile. Campaign Monitor can and will suspend accounts that get too many suspicious sign ups.
 
 # Salesforce
 
@@ -35,24 +39,24 @@ New Renewal SA projects will most likely use Salesforce for communcation, CRM du
 
 When implementing Salesforce forms, it is reccomended to implement the web-to-lead form directly as HTML in the page or content module. 
 
-Renewal SA does not reccomend proxying via API connections, Gravity Forms plugins etc as this can lead to unexpected outcomes.
+Renewal SA does not reccomend proxying via API connections, Freeform, Formie etc as these integrations are lacklustre and have lead to unexpected outcomes in the past.
 
 {:.note}
 It's highly reccomended to have a helper in your templates to quicky turn the Saleforce web-to-lead debug params on and off. Utilise a conditional statement to print out these additional hidden fields.
 
 # Other Forms
 
-If the website requires additional forms that aren't suitable for Saleforce, then the form plugin of choice is Gravity Forms. This is available via the Renewal SA Plugins repository, along with several add-ons relevant to services Renewal SA utilise.
+If the website requires additional forms that aren't suitable for Saleforce, then the form plugin of choice is [Formie](https://plugins.craftcms.com/formie?craft4). From the numerious Craft CMS form plugins, this one has proven the most robust and had the most vetting in SA gov applicactions at this time.
 
 ```bash
-# Install Gravity Forms via Composer
-composer require renewalsa-plugins/gravityforms
+# Install Formie vis Composer
+ddev composer require "verbb/formie:^2.1.6"
 
-# List available Gravity Forms addons
-composer search renewalsa-plugins/gravity
+# Activate it for use on craft
+ddev craft plugin/install formie
 ```
 
-By standardising on Gravity Forms we provide seamless admin user experience for people working in cross-project roles and when shifting to new projects.
+By standardising on Formie we provide seamless admin user experience for people working in cross-project roles and when shifting to new projects.
 
 
 

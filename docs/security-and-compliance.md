@@ -17,8 +17,8 @@ Performance is also a form of accessibility - slow sites with huge bandwidth req
 ### Security 
 To help meet the security requirements this project comes with two plugins installed out the box
 
-- Two Factor Authentication (Which is required for anyone with admin access)
-- Password Policy (to enforce strong passwords for all users)
+- [Two Factor Authentication](https://plugins.craftcms.com/two-factor-authentication?craft4) - required for anyone with admin access
+- [Password Policy](https://plugins.craftcms.com/password-policy?craft4=) - to enforce strong passwords for all users
 
 Larger sites with projected long life-spans are required to implement [Audit](https://plugins.craftcms.com/audit?craft4) to enable the tracking of changes within the admin. 
 
