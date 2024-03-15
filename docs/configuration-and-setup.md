@@ -12,10 +12,10 @@ The following table can help you understand where best to set these values.
 
 | Environment Specific Value? | Sensitive Value (API key etc)  | Strategy  |
 |--|--|--|
-| Yes | Yes | Environment Variables |
-| No | Yes  | Environment Variables |
-| Yes | No | Environment Variables |
-| No | No | PHP Config, `.environment` file |
+| ✅ Yes | ✅ Yes | Environment Variables |
+| ❌ No | ✅ Yes  | Environment Variables |
+| ✅ Yes | ❌ No | Environment Variables |
+| ❌ No | ❌ No | PHP Config, `.environment` file |
 
 As you can see, Enviornment Variables are often the best answer, but for non-sensitive values that stay the same between the enviornments, it can be best to commit these values to the repo via a `config/*.php` file. `.environment` can also be used to export environment variables at runtime, allowing you to "translate" platform.sh specific vars and dynamically set values.
 
