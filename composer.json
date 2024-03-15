@@ -1,6 +1,9 @@
 {
   "require": {
+    "born05/craft-twofactorauthentication": "^3.3.7",
     "craftcms/cms": "^4.4.0",
+    "craftcms/mailgun": "^3.0.0",
+    "craftpulse/craft-password-policy": "^4.1.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
@@ -20,7 +23,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.0.2"
+      "php": "8.2"
     }
   },
   "scripts": {

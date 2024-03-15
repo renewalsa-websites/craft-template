@@ -15,31 +15,33 @@ Government websites are required to be accessible - with sites complying with ei
 Performance is also a form of accessibility - slow sites with huge bandwidth requirements discriminate against people with older devices or slower internet connections. All sites should score 85 or higher in [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) for both Mobile or Desktop.
 
 ### Security 
-To help meet the security requirements this project comes with some plugins in the `composer.json`. 
+To help meet the security requirements this project comes with two plugins installed out the box
 
- - WP 2FA for Two Factor Authentication (mandatory for all admins)
- - WordPress Password bCrypt to ensure srong hashing of passwords
- - Disable Comments to turn off comment functionality and reduce possible attack vectors
- - WP Security Audit Log Premium to log user activity within the site
- - Limit Logins Attempt (reloaded) to prevent brute force attacks against user passwords
+- Two Factor Authentication (Which is required for anyone with admin access)
+- Password Policy (to enforce strong passwords for all users)
 
-These plugins must be activated and configured in order to work properly.
+Larger sites with projected long life-spans are required to implement [Audit](https://plugins.craftcms.com/audit?craft4) to enable the tracking of changes within the admin. 
 
- - WP Security Audit Log should be setup so that only one user can see / clear the log
- - Disable Comments should be set to turn comments off for everything
- - WP 2FA must be configured to require 2FA for all Admin users, it is recommended for editor users as well or any user level that can access Personally Identifiable Information such as form submissions.
+The requirement for the Audit plugin can be skipped for shorter project-related websites with a projected lifespan of less than 24 months.
 
-For security reasons, and to work with Platform.SH, some parts of the WordPress admin are disabled
-- The theme editor is disabled
-- The plugin editor is disabled
-- Any plugin that allows the user to edit the file system via the admin is banned
-- The installation of plugins via the admin is banned
+Two Factor Authentication must be enabled / enforced for all admin users.
+
+The password policy settings can be changes via `config/password-policy.php` but the default configuration complies with the minimum standards for Renewal SA's security standards.
+
 
 ### Change management and version control
 The use of version control is mandatory for the development of websites, and our partners are encourage to pick approaches that promote a separation of concerns between structure and content, with structure being managed and tracked via code, and content is kept in the database.
 
 Some practical examples of this include
 
- - Using ACF (with field definitions tracked in `acf-json` or defined in code) vs a Page Builder
- - Define custom posts and taxonomies in code vs via a plugin
- - Layouts and Styling being defined via the theme template files and css vs a Page Builder
+ - Minimising storage of code within the database (ie: not storing too much raw HTML)
+ - No fields for `script` or `style` tags that get output into the page (GTM is the correct tool for tagging and tracking)
+
+Thankfully the modern nature of Craft CMS means that many of the standard practices are good practices, and you should not need to drastically change your development style to suit the requirements.
+
+### Credentials, API Keys and Sensitive Information
+It is important NOT to commit sensitive information such as API keys etc to the github repository.
+
+When developing locally things such as Google API Keys, AWS Credentials, Campaign Monitor API Keys etc should be defined in `.env` which is not committed to the repo.
+
+When deploying to Platform.sh it will be necessary to set these as enviornment variables.
