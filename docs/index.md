@@ -76,6 +76,7 @@ git  push  -u  origin  master
 A number of files will need the `craft-template` string replaced with your project's slug. the slug should correspond to the folder name locally for ease of setup.
 
 Replace in the following files
+
 - `.app.platform.yaml` - `name` property
 - `.ddev/config.yaml` - `name` property
 - `.platform/routes.yaml` - `upstream` property
@@ -116,7 +117,7 @@ ddev launch
 
 ## A starting point
 
-This boilerplate is intentionally sparse in order to not force a particular toolchain onto developers. It is mainly concerned with the structure of the project, and the use of composer for managing WordPress, Plugins and 3rd party libraries.
+This boilerplate is intentionally sparse in order to not force a particular toolchain onto developers. It is mainly concerned with the structure of the project, and maximising compatability with Platform.sh.
 
 ### Key principles
 

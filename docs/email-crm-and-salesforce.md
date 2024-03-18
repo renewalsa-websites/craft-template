@@ -31,7 +31,7 @@ Some projects still utilise Campaign Monitor for mailing lists. When implementin
 - An API based integration is possible, but not reccomended.
 
 {:.warning}
-Ensure any subscribe forms have adequate spam protection, such as Recaptcha or Turnstile. Campaign Monitor can and will suspend accounts that get too many suspicious sign ups.
+Ensure any subscribe forms have adequate spam protection, such as Recaptcha or Hcaptcha. Campaign Monitor can and will suspend accounts that get too many suspicious sign ups.
 
 # Salesforce
 

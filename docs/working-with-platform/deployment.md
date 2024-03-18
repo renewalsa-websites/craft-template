@@ -20,7 +20,7 @@ Should you require other commands to be run as part of the deploy, this can be s
 This project also includes a build script to install javascript as defined in `/package.json` and run a `build` command. It does so using Yarn, though is easy enough to edit to use NPM and whatever your build command is.
 
 {: .note }
-The default build script assumes your `package.json` is in the project's root folder. Some agencies will have this file within the WordPress theme. Alter the paths of the build script as necessary, it is suggested that the `node_modules` directory be deleted after a successful build to avoid taking up too much disk space.
+The default build script assumes your `package.json` is in the project's root folder. Alter the paths of the build script as necessary, it is suggested that the `node_modules` directory be deleted after a successful build to avoid taking up too much disk space.
 
 The included build example is as follows 
  
@@ -88,7 +88,7 @@ hooks:
 
 ## Simple .platform.app.yaml example
 
-If you are creating a WordPress site that does not require a front-end build step (no NPM, JS compilation, Sass etc) then the following example shows a stripped back `.platform.app.yaml` without all the build steps.
+If you are creating a Craft CMS site that does not require a front-end build step (no NPM, JS compilation, Sass etc) then the following example shows a stripped back `.platform.app.yaml` without all the build steps.
 
 ```yaml
 # Complete list of all available properties: https://docs.platform.sh/create-apps/app-reference.html
@@ -100,7 +100,7 @@ name: your-app-name
 
 # The runtime the application uses.
 # Complete list of available runtimes: https://docs.platform.sh/create-apps/app-reference.html#types
-type: 'php:8.1'
+type: 'php:8.2'
 
 # Specifies a default set of build tasks to run. Flavors are language-specific.
 # More information: https://docs.platform.sh/create-apps/app-reference.html#build
@@ -114,7 +114,6 @@ build:
 dependencies:
     php:
         composer/composer: '^2'
-        wp-cli/wp-cli-bundle: "^2.4.0"
 
 # The relationships of the application with services or other applications.
 # The left-hand side is the name of the relationship as it will be exposed

@@ -25,12 +25,7 @@ The default `.platform/routes.yaml`
         enabled: false
         # Base the cache on the session cookies. Ignore all other cookies.
         cookies:
-            - '/^wordpress_logged_in_/'
-            - '/^wordpress_sec_/'
-            - 'wordpress_test_cookie'
-            - '/^wp-settings-/'
-            - '/^wp-postpass/'
-            - '/^wp-resetpass-/'
+            - '/^.*_identity/'
 
 "https://www.{default}/":
     type: redirect
@@ -88,4 +83,4 @@ Individual domain specified example (repeat as needed)
     to: https://domain2.com.au/
 ```
 
-The WordPress template is already set up to work with multiple incoming URLs, using `$_SERVER['HTTP_HOST']` as the `WP_HOME` / `WP_SITEURL` constants. 
+The Craft Template is not configured for Multisite out the box, but will work once the correct variables etc have been added. This does depend on how the implementing agency is managing the URLs, many developers use `PRIMARY_SITE_URL` along with `SECONDARY_SITE_URL` or something similar, with each URL defined for the environment.

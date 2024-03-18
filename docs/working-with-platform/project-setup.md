@@ -19,11 +19,15 @@ When creating a new project, the following configuration is required.
 |Region: | Australia (au-2) Azure |
 |Organization: | Renewal SA Enterprise |
 
+The production enviornment name is case sensitive, so ensure it is set to `live` and not `Live`.
+
 ## Connect your git repository
 
 All projects must use the `github` integration to link to a repository hosted in the Renewal SA Websites github organisation.
 
 For ease of setup, it's required that this repo have `master`, `uat` and `live` branches.
+
+It is reccomended to use the Renewal SA Github User's token when connecting to github, this can be provided to you via Renewal SA IT.
 
 ## Domain configuration
 

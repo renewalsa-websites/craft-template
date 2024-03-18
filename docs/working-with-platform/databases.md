@@ -8,7 +8,7 @@ nav_order: 8
 
 # Databases (and services)
 
-The database is a vital part of our Wordpress application, and the DB is referred to as a 'service' in platform.sh. Services are additional process (isolated via containers) that should be connected to the main PHP application during runtime. 
+The database is a vital part of our Craft application, and the DB is referred to as a 'service' in platform.sh. Services are additional process (isolated via containers) that should be connected to the main PHP application during runtime. 
 
 The most common use case of this is a plain database (MySQL), however if you needed to add an object cache like Redis then this would also be provisioned as a service and attached to the main PHP application.
 
@@ -47,9 +47,6 @@ You can also easily dump the DB to your local machine for easy development
 # Dump the live DB to a file called 'live-database.sql'
 platform db:dump --environment=live --project=yourprojectid --filename="live-database.sql"
 
-# Stream the dump of the live DB directly into your local WP Database using WP CLI
-# Presumes WP CLI set up and configured locally
-platform db:dump --environment=live --project=yourprojectid --stdout | wp db import -
 ```
 
 ### Uploading the database

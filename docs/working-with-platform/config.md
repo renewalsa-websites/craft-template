@@ -7,7 +7,7 @@ nav_order: 2
 
 # Configuration
 
-The WordPress starter template comes with example files for platform.sh configuration that should be suitable for most WordPress applications. Complex structures like WordPress multisite will require more thought, and the values within the various config files will need to be edited to match the requirements of the build and application.
+The Craft CMS template comes with example files for platform.sh configuration that should be suitable for most Craft CMS applications. Complex structures like Craft multisite will require more thought, and the values within the various config files will need to be edited to match the requirements of the build and application.
 
 ## Important Files
 `.platform.ap.yaml`
