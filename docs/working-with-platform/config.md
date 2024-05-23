@@ -21,3 +21,11 @@ This file defines other attached services that need to communicate with the main
 
 `.platform/routes.yaml`
 This file defines the HTTP routing of the app, allowing for the accepted domains, and redirect rules, to be defined in code. The setup included in this template handles a single domain, and automatically adjusts to use the `default` domain from platform.sh.
+
+## Environment Variables
+
+Platform allows you to set environment variables in multiple ways - via the CLI, via the GUI, and via defining them in `.platform.app.yaml`. It is reccomended to define variables using the GUI, as definitions within `.platform.app.yaml` are not visible via the GUI.
+
+To set "top level" enviornment variables (such as those expected by Craft when using `App::env()`) you MUST prefix the variable name with `env:`.
+
+EG: to create the environment variable `CRAFT_SECURITY_KEY` you must create a variable named `env:CRAFT_SECURITY_KEY` within the GUI or command line.
