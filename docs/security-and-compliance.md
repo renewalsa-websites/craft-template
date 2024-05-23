@@ -29,21 +29,21 @@ Two Factor Authentication **must** be enabled / enforced for all admin users.
 The password policy settings can be changes via `config/password-policy.php` but the default configuration complies with the minimum standards for Renewal SA's security standards.
 
 ### Craft Settings for Enhanced Security
-Craft contains a number of settings which can enhance the security of the application, removing the need for additional plugins as might be the case in a WordPress based site. By default these are usually off or set to very forigiving defaults to not slow down development, but these should be set for the production environment to secure the application properly.
+Craft contains a number of settings which can enhance the security of the application, removing the need for additional plugins as might be the case in a WordPress based site. By default these are usually off or set to very forgiving defaults to not slow down development, but these should be set for the production environment to secure the application properly.
 
 #### Change the admin path
 
 [Craft Docs - cpTrigger](https://craftcms.com/docs/5.x/reference/config/general.html#cptrigger)
 
-The `cptrigger`setting controls the url path by which the login and admin sections of the site can be accessed. Default is `admin` which means you can log in by visiting `https://yoursite.com/admin/`. It is reccomended to change this from the default, to prevent common scanning or brute force attacks against the login page. This is an example of security through obscurity - which will not stop a determined attacker, but does reduce the load on the server from automated attacks, botnets etc which will be searching for the defaults.
+The `cptrigger` setting controls the url path by which the login and admin sections of the site can be accessed. Default is `admin` which means you can log in by visiting `https://yoursite.com/admin/`. It is recommended to change this from the default, to prevent common scanning or brute force attacks against the login page. This is an example of security through obscurity - which will not stop a determined attacker, but does reduce the load on the server from automated attacks, botnets etc which will be searching for the defaults.
 
 #### Prevent brute force password attacks
 
 [Craft Docs - maxInvalidLogins](https://craftcms.com/docs/5.x/reference/config/general.html#maxinvalidlogins)
 
-The `maxInvalidLogins` setting controls how many login attempts a user can fail before they are temporarily blocked by the system. The default value is `5`. It is reccomended to set this to `3` on production sites. The period of time that these attempts can occur within is controlled by `invalidLoginWindowDuration`, which is set to `3600` (1 hour in seconds) by default. The time that a user is locked out of the system for is set by `cooldownDuration` which has a default value of `300`, which is 5 minutes in seconds.
+The `maxInvalidLogins` setting controls how many login attempts a user can fail before they are temporarily blocked by the system. The default value is `5`. It is recommended to set this to `3` on production sites. The period of time that these attempts can occur within is controlled by `invalidLoginWindowDuration`, which is set to `3600` (1 hour in seconds) by default. The time that a user is locked out of the system for is set by `cooldownDuration` which has a default value of `300`, which is 5 minutes in seconds.
 
-For production apps the following settings are reccomended
+For production apps the following settings are recommended
 
 ```
 'maxInvalidLogins' => 3,
@@ -74,4 +74,4 @@ It is important NOT to commit sensitive information such as API keys etc to the 
 
 When developing locally things such as Google API Keys, AWS Credentials, Campaign Monitor API Keys etc should be defined in `.env` which is not committed to the repo.
 
-When deploying to Platform.sh it will be necessary to set these as enviornment variables.
+When deploying to Platform.sh it will be necessary to set these as environment variables.
