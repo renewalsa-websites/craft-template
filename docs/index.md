@@ -106,7 +106,7 @@ ddev composer install
 
 Next, manually add the `CRAFT_APP_ID` and `CRAFT_SECURITY_KEY` to `.env`, getting the values from the other install or staging enviornment.
 
-To complete the setup, Import a copy of the existing database and sync the assets.
+To complete the setup, [Import a copy of the existing database](https://ddev.readthedocs.io/en/stable/users/usage/commands/#import-db) and sync the assets.
 
 Depending on the complexity of your project, you may need to add more values to the `.env` to match the other environment - this will depend on the customisations made to craft, along with the plugins used etc.
 
