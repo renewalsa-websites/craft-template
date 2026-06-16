@@ -6,7 +6,7 @@ nav_order: 1
 
 # Renewal SA Craft CMS Template Docs
 
-The Craft CMS acts as a blank canvas to allow agencies to easily spin up new Craft CMS 4 projects that conform with requirements for Renewal SA and the Platform.sh hosting environment that sites are deployed to.
+The Craft CMS acts as a blank canvas to allow agencies to easily spin up new Craft CMS 5 projects that conform with requirements for Renewal SA and the Platform.sh hosting environment that sites are deployed to.
 
 This repository is intended to be cloned, then detached from this git remote. You are free to change from there as you see fit - there is no need to keep this repo as an upstream dependency, the project is not designed to "ship updates".
 
